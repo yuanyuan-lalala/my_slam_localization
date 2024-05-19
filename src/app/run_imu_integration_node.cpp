@@ -37,32 +37,6 @@ int bfnn_point( CloudPtr cloud, const Vec3f& point) {
 
 int main(int argc, char** argv) {
     
-    std::vector<int> num = {1,5,32,6,8,2};    
-    auto min_ele = std::min_element(num.begin(), num.end());
-     if (min_ele != num.end()) {
-        std::cout << "Min element: " << *min_ele << std::endl;
-    }
-    *(std::back_inserter(num)) = 100;
-    std::cout<<"num: ";
-    for(auto i : num){
-
-        std::cout<<i<<std::endl;
-    }
-    // std::accumulate(InputIterator first, InputIterator last, Tp init, BinaryOperation binary_op)
-    std::vector<int> nums_for_each(10);
-    std::for_each( nums_for_each.begin(), nums_for_each.end(), 
-    [idx=0,&nums_for_each](size_t i)
-    mutable { i = idx++;
-    nums_for_each[i] = i;});
-    
-    
-    std::cout<<"nums_for_each:"<<std::endl;
-    for(auto i:nums_for_each){
-
-        std::cout<<i;
-    }
-    std::cout<<std::endl;
-
 
 
     return 0;
